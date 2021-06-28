@@ -45,7 +45,7 @@ const CookRecipe = () => {
                 <input type="submit" value="search" />
             </form>
             <div className="recipes">
-                {recipes !== [] && recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
+                {recipes !==[] && recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
             </div>
         </div>
     )
