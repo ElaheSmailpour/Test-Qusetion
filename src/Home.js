@@ -14,6 +14,12 @@ const Home = () => {
                 <li>
                 <Link to={'add'}> Add </Link>
                 </li>
+                <li>
+                    <Link to="/productList">ProductList</Link>
+                </li>
+                <li>
+                    <Link to="/cook">CookRecipe</Link>
+                </li>
                 </ul>
         </div>
     )
