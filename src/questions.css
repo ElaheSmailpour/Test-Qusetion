@@ -1,0 +1,13 @@
+.myAnswer{
+    color: black;
+    background-color: rgb(33, 139, 146);
+    padding: 1rem;
+    min-width: 15rem;
+    border-radius: 1rem;
+    width: max-content;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}

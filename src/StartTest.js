@@ -1,10 +1,10 @@
-
+import {Link} from "react-router-dom"
 
 const StartTest=()=>{
     return(
         <div className="StartTest">
             <h1>test</h1>
-            <button id="teststarten" onClick={teststarten}>Test start</button>
+            <Link to="/test">Test start</Link>
         </div>
     )
 }
