@@ -21,10 +21,14 @@ function App() {
 
   }
   const BackQuestion = () => {
-
+    if (indexQuestion !== 0) {
+      setIndexQuestion(indexQuestion - 1)
+    }
   }
   const nextQuestion = () => {
-
+    if (indexQuestion < data.length - 1) {
+      setIndexQuestion(indexQuestion + 1)
+    }
   }
   return (
 
