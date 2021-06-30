@@ -1,40 +1,50 @@
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import React from "react"
+import React, { useState } from "react"
+import Questions from "./Questions"
 
-import Home from './Home'
-import Profile from './Profile'
-import Add from './Add'
-import ProductList from './ProductList'
-import CookRecipe from './CookRecipe'
+import Axios from "axios";
 function App() {
+  const [data, setData] = useState([])
+  const [indexQuestion, setIndexQuestion] = useState(0)
 
+  const url = `https://einbuergengstestbackend.herokuapp.com/RandomQuestion`;
+
+  const teststarten = async () => {
+
+    const result = await Axios.get(url);
+    console.log("result=", result);
+    setData(result.data)
+
+
+  };
+  const TestEnde = () => {
+
+  }
+  const BackQuestion = () => {
+
+  }
+  const nextQuestion = () => {
+
+  }
   return (
-    
-    <Router>
-      <div className="App">
-  <div className="router"></div>
 
-  <main>
-          <Switch>
 
-            <Route exact path='/'><Home /></Route>
-            <Route path='/profile'><Profile /></Route>
-           <Route path="/add"><Add/></Route>
-           <Route path="/productList"><ProductList/></Route>
-           <Route path="/cook"><CookRecipe/></Route>
-          </Switch>
-        </main>
-       
+    <div className="App">
+      <h1>Test App!</h1>
+      <button id="teststarten" onClick={teststarten}>Test starten</button>
+      {data.length > 0 && <Questions lenghthQuestion={data.length}
+        QusetionIndex={indexQuestion}
+      />}
+
+
+      <div className="containerButton">
+        <button className="BackQuestion" onClick={BackQuestion}>Back</button>
+        <button className="TestEnde" onClick={TestEnde}>Test beenden</button>
+        <button className="nextQuestion" onClick={nextQuestion}>Next</button>
       </div>
-      
-    </Router>
-    
- 
+    </div>
+
+
   );
 }
 
