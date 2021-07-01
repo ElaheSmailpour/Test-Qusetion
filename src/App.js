@@ -12,10 +12,9 @@ function App() {
 
     <BrowserRouter>
       <Switch>
-    
+        <Route path={"/result"} component={Result}></Route>
         <Route path={"/test"} component={Test}></Route>
         <Route path={"/"} component={StartTest}></Route>
-        <Route path={"/result"} component={Result}></Route>
       </Switch>
     </BrowserRouter>
   );
